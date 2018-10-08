@@ -7,19 +7,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Calendar year={2018}></Calendar>
           <p>
-            Edit <code>src/App.js</code> and save to reload.
+            Calendar demo app
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
         </header>
+        <Calendar year={2018}></Calendar>
       </div>
     );
   }
