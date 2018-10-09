@@ -45,9 +45,9 @@ class Month extends Component {
             </tr>
           </thead>
           <tbody>
-            { weeks.map((week) => (
-              <tr>
-                { week.map((date) => <Day date={date}></Day>)}
+            { weeks.map((week, index) => (
+              <tr key={index}>
+                { week.map((date, index) => <Day key={index} date={date} />)}
               </tr>
             ))}
           </tbody>

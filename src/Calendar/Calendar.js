@@ -9,7 +9,7 @@ class Calendar extends Component {
         <h3 className="text-center">{this.props.year}</h3>
         <div className="row">
         {
-          [...Array(12)].map((e, index) => <div className="col-4"><Month year={this.props.year} month={index}></Month></div>)
+          [...Array(12)].map((e, index) => <div className="col-4" key={index}><Month year={this.props.year} month={index}></Month></div>)
         }
         </div>
       </div>
