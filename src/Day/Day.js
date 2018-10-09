@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import categories from '../categories';
 
-const categories = {
-  '' : '',
-  'Holiday' : 'bg-primary text-white',
-  'Birthday' : 'bg-success text-white',
-  'Busy' : 'bg-dark text-white',
-  'Anniversary' : 'bg-info text-white'
-};
 
 const CategoryModal = (props) => {
   return <Modal isOpen={props.isOpen} toggle={props.toggle}>
@@ -39,7 +33,7 @@ class NormalDay extends Component {
     super(props);
     this.state = {
       modalOpen: false,
-      category: ''
+      category: this.props.category || ''
     };
 
     this.toggle = this.toggle.bind(this);

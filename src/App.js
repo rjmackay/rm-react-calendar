@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
+import { Form, FormGroup, Label, Input, Table } from 'reactstrap';
 import './App.css';
 import Calendar from './Calendar/Calendar';
-import { Form, FormGroup, Label, Input } from 'reactstrap';
+import Day from './Day/Day';
+import categories from './categories';
 
 class App extends Component {
   constructor(props) {
@@ -25,6 +27,19 @@ class App extends Component {
         </header>
         <main>
           <Calendar year={this.state.year}></Calendar>
+
+          <Table size="sm" className="col-4">
+            <thead>
+              <tr>
+                <th colSpan="7">
+                  Key
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              { Object.keys(categories).map((category) => <tr key={category}><Day date={category} category={category} /></tr>) }
+            </tbody>
+          </Table>
         </main>
         <footer>
           <Form>
