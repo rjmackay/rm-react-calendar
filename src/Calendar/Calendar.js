@@ -6,9 +6,12 @@ class Calendar extends Component {
   render() {
     return (
       <div className="Calendar">
+        <h3 className="text-center">{this.props.year}</h3>
+        <div className="row">
         {
-          [...Array(12)].map((e, index) => <Month year={this.props.year} month={index}></Month>)
+          [...Array(12)].map((e, index) => <div className="col-4"><Month year={this.props.year} month={index}></Month></div>)
         }
+        </div>
       </div>
     );
   }

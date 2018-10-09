@@ -5,13 +5,15 @@ import Calendar from './Calendar/Calendar';
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="App container">
         <header className="App-header">
-          <p>
+          <h2>
             Calendar demo app
-          </p>
+          </h2>
         </header>
-        <Calendar year={2018}></Calendar>
+        <main>
+          <Calendar year={2018}></Calendar>
+        </main>
       </div>
     );
   }
