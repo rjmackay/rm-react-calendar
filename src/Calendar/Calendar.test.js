@@ -4,6 +4,6 @@ import Calendar from './Calendar';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Calendar />, div);
+  ReactDOM.render(<Calendar year="2018" />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
