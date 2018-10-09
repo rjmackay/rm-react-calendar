@@ -27,7 +27,7 @@ class Month extends Component {
 
     return (
       <div className="Month">
-        <Table>
+        <Table size="sm">
           <thead>
             <tr>
               <th colSpan="7">
