@@ -3,7 +3,7 @@ import { Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, M
 import categories from '../categories';
 
 
-const CategoryModal = (props) => {
+export const CategoryModal = (props) => {
   return <Modal isOpen={props.isOpen} toggle={props.toggle}>
     <ModalHeader toggle={props.toggle}>This date is a...</ModalHeader>
     <ModalBody>
@@ -24,11 +24,11 @@ const CategoryModal = (props) => {
   </Modal>
 }
 
-const EmptyDay = (props) => {
+export const EmptyDay = (props) => {
   return <td className="bg-light"></td>
 }
 
-class NormalDay extends Component {
+export class NormalDay extends Component {
   constructor(props) {
     super(props);
     this.state = {
